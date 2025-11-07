@@ -1,3 +1,4 @@
+```
 NLP_PROJECT/
 ├── backend/
 │   ├── app/
@@ -31,3 +32,4 @@ NLP_PROJECT/
 ├── db_init.sql
 ├── README.md
 └── requirements.txt
+```
