@@ -1,0 +1,62 @@
+<!-- 모델 추가 전이라 프로토타입으로 스타일만 맞춤 -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JP→KR 톤 변환</title>
+  <link rel="icon" href="/frontend/static/japanese.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    header button {
+      margin-left: auto;
+    }
+    textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JP→KR 톤 변환</h1>
+    <button id="logoutBtn" class="secondary outline">로그아웃</button>
+  </header>
+
+  <main class="container">
+    <form onsubmit="event.preventDefault(); convert();">
+      <div class="grid">
+        <label>
+          일본어 원문
+          <textarea id="jp" rows="8" placeholder="翻訳する日本語を入力してください"></textarea>
+        </label>
+        <label>
+          한국어 결과
+          <textarea id="kr" rows="8" placeholder="여기에 결과가 표시됩니다"></textarea>
+        </label>
+      </div>
+      <div class="grid">
+        <label>출력 톤
+          <select id="to">
+            <option value="formal">정중</option>
+            <option value="anime">소년만화</option>
+          </select>
+        </label>
+      </div>
+      <button type="submit">변환</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NLP Project</p>
+  </footer>
+
+  <script src="./js/convert.js"> </script>
+</body>
+</html>

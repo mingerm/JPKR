@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <title>회원가입</title>
+  <style>
+    .area{
+        min-height:100vh;
+        display:grid;
+        place-items:center;
+        padding: 2rem 0; 
+    }
+    .box{
+        width: 600px;
+        padding: 40px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>JPKR</h1>
+    </header>
+  <main class="area">
+    <div class="box">
+      <h1>Sign Up</h1>
+      <form id="signup-form" novalidate>
+        <label>아이디
+          <input type="text" id="sid" autocomplete="username" required>
+        </label>
+        <label>비밀번호
+          <input type="password" id="spswd" autocomplete="new-password" required>
+        </label>
+        <button type="submit">가입하기</button>
+      </form>
+      <p style="margin-top:12px;"><a href="./index.html">로그인으로 돌아가기</a></p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 NLP Project</p>
+</footer>
+  <script src="./js/signup.js"></script>
+</body>
+</html>
